@@ -9,7 +9,10 @@ app.get("/",(request,response)=>{
     response.send({status:"SERVER ON!"})
 })
 
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use(express.json({ type: 'application/vnd.api+json' }))
+
 app.use('/',cardapioRoute)
 
 app.listen(3000, () => {

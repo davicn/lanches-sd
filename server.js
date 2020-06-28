@@ -3,6 +3,7 @@ const app = express()
 
 const cardapioRoute = require('./routes/cardapio.routes')
 const pedidosRoute = require('./routes/pedidos.routes')
+const entregasRoute = require('./routes/entregas.routes')
 
 
 app.get("/", (request, response) => {
@@ -15,6 +16,7 @@ app.use(express.json({ type: 'application/vnd.api+json' }))
 
 app.use('/', cardapioRoute)
 app.use('/', pedidosRoute)
+app.use('/',entregasRoute)
 
 app.listen(3000, () => {
     console.log("Servidor inicializado!");

@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+const port = process.env.PORT || 3000;
+
 const cardapioRoute = require('./routes/cardapio.routes')
 const pedidosRoute = require('./routes/pedidos.routes')
 const entregasRoute = require('./routes/entregas.routes')
@@ -18,6 +20,6 @@ app.use('/', cardapioRoute)
 app.use('/', pedidosRoute)
 app.use('/',entregasRoute)
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Servidor inicializado!");
 });

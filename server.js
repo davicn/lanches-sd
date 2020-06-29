@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors');
 
 const port = process.env.PORT || 3000;
 
@@ -15,6 +16,7 @@ app.get("/", (request, response) => {
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.json({ type: 'application/vnd.api+json' }))
+app.use(cors());
 
 app.use('/', cardapioRoute)
 app.use('/', pedidosRoute)

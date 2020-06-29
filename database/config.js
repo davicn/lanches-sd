@@ -4,7 +4,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: 'postgres://cbowimjtocsuau:e594cfac07a72b5210527d4a6c73636f678396bcaaf34ff4242e633a59b7abe8@ec2-34-233-226-84.compute-1.amazonaws.com:5432/d4aelf3c2ltv8v',
     ssl: {
         rejectUnauthorized: false
     }

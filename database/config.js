@@ -4,7 +4,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const pool = new Pool({
-    connectionString: 'postgres://qawohvqlxsyocy:53c9ed2b4d5b453043e9404d3c2bdc84120fdfeb526a392add9dcd4d6f02e5b2@ec2-54-236-169-55.compute-1.amazonaws.com:5432/dbdr25h606nl71',
+    connectionString: 'postgres://,
     ssl: {
         rejectUnauthorized: false
     }
